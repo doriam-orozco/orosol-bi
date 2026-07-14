@@ -16,5 +16,6 @@ SELECT c.anio,
        ROUND(SUM(v.venta_neta)) AS venta_q
 FROM fact_ventas v
 JOIN dim_calendario c ON c.fecha = v.fecha
+WHERE EXTRACT(DOY FROM v.fecha) <= 194
 GROUP BY c.anio
 ORDER BY c.anio;
