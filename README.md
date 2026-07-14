@@ -242,9 +242,75 @@ sido un error caro.
 **Encontrar una señal no es encontrar una causa. Siempre hay que preguntar cuánto
 pesa.**
 
-### 10. Pendiente: las unidades perdidas siguen creciendo
+### 10. Causa raíz final: el inventario está en los productos equivocados
 
-El inventario está plano desde 2024 (8.4 → 8.3 → 8.6), pero las unidades no servidas
-siguen subiendo: **1,340 → 2,704 → 3,409 → 3,680** (y 2026 es medio año). Algo más se
-está deteriorando. Hipótesis a probar: la política de reposición sigue calibrada a la
-demanda anterior, incluidos los 57 SKUs que murieron en abril de 2025.
+Quedaba una contradicción sin resolver: el inventario está **plano** desde 2024
+(8.4 → 8.3 → 8.6 unidades promedio), pero las unidades no servidas **siguen
+subiendo** (2,704 → 3,409 → 3,680). Si el colchón no cambió, ¿por qué empeoran los
+quiebres?
+
+Porque el promedio mentía. **El inventario no bajó: se movió de lugar.**
+
+Clasificando los 900 SKUs en deciles por venta de los últimos 12 meses:
+
+| Decil | Venta 12m | Inventario hoy | **Q inventario por Q vendido** | Unid. perdidas |
+|---|---|---|---|---|
+| **1** (top) | Q 160.8 M | Q 5.43 M | **0.034** | **1,866** |
+| 2 | Q 16.5 M | Q 0.72 M | 0.044 | 987 |
+| 3 | Q 8.6 M | Q 0.92 M | 0.107 | 676 |
+| … | | | | |
+| 8 | Q 0.44 M | Q 0.16 M | 0.367 | 132 |
+| 9 | Q 0.19 M | Q 0.06 M | 0.343 | 138 |
+| **10** (cola) | Q 0.05 M | Q 0.03 M | **0.683** | 53 |
+
+**El decil 10 carga 20× más inventario por quetzal vendido que el decil 1.**
+
+Por cada quetzal que venden los productos muertos hay 68 centavos parados en bodega.
+Por cada quetzal que venden los productos estrella, 3.4 centavos. La proporción está
+invertida.
+
+Y el remate: el decil 1 genera el **78% de la venta** y es el que **más unidades
+pierde por quiebre** (1,866). Los productos que sostienen la empresa son los que se
+están quedando sin stock.
+
+---
+
+## Diagnóstico: no son cuatro problemas, es uno
+
+Todos los hallazgos anteriores son síntomas de la misma enfermedad:
+
+1. **57 SKUs murieron en abril de 2025.**
+2. **La política de reposición nunca se enteró** — sigue comprando según la demanda
+   anterior.
+3. **Ese capital tenía que salir de algún lado** — salió de los productos que rotan.
+4. **Por eso los quiebres se concentran en el decil 1**, que sostiene el 78% del
+   negocio.
+
+> **Orosol no tiene poco inventario. Tiene el inventario en los productos
+> equivocados. La empresa está financiando su inventario muerto a costa de su
+> inventario vivo.**
+
+De ahí cuelga todo lo demás: el fill rate cayendo, los Q460 mil anuales de margen
+perdido, y el estancamiento de la venta.
+
+## Recomendaciones
+
+| # | Acción | Impacto estimado |
+|---|---|---|
+| 1 | **Liquidar los 57 SKUs muertos** | Libera **Q1.34 M** de capital |
+| 2 | **Recalibrar la política de reposición** — hoy sigue anclada a la demanda de antes de abril 2025 | Detiene la sangría en origen |
+| 3 | **Redirigir el capital liberado al decil 1** | Ataca el 78% de la venta y la mayor fuente de quiebres |
+| 4 | **Auditar el CEDI Escuintla** — 70% de entregas a tiempo vs. 89% del resto, **desde 2023** | Problema de despacho, no de inventario |
+| 5 | **Diversificar el Proveedor 29** (31% de la venta) | Riesgo latente, no urgente. Evaluar el costo: probablemente da ese precio *por* el volumen |
+
+## Nota metodológica
+
+Dos veces en esta investigación una conclusión plausible resultó falsa:
+
+- **"Las ventas cayeron 47% en 2026"** → artefacto del año parcial. Un tablero que lo
+  mostrara así no tendría un bug: **mentiría**.
+- **"El Proveedor 25 está degradando el servicio"** → señal limpia (+16.5 pp, 4.5× el
+  siguiente) y **materialmente irrelevante**: pesa el 1.24% de la venta.
+
+**Encontrar una señal no es encontrar una causa.** La pregunta que salva análisis es
+siempre la misma: *¿cuánto pesa esto?*
