@@ -101,4 +101,5 @@ comparación contra años completos debe hacerse **YTD contra YTD**. La columna
 
 ## Hallazgos
 
-*(por documentar — se completa conforme avanza el análisis)*
+*Se realizo una primer consulta con una comparativa de los datos delos 4 años de datos, pero se estaba realizando mal porque se considero al 2026 con un año completo, alli mostraba una caida del 47% de las ventas pero no era real*
+*Se corrigio la consulta ys e compararon datos hasta el 13 de julio, en donde pudimos evidenciar que realmente no era un caida del 47% su no del -2.9%*
