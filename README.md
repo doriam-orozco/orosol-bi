@@ -123,40 +123,69 @@ Las tres bodegas caen (Escuintla −1.4%, Guatemala −1.6%, Quetzaltenango −8
 Cuando todas las partes se mueven en la misma dirección, la causa no está en las
 partes.
 
-### 3. La caída se concentra en dos categorías
+### 3. La caída se concentra en dos categorías... pero eso es el síntoma
 
-Mientras Plomería (+4.2%) y Material Eléctrico (+0.8%) crecen, dos categorías se
-hunden:
+Mientras Plomería (+4.2%) y Material Eléctrico (+0.8%) crecen, dos categorías
+caen: Herramienta Eléctrica (−4.1%, el 61% de la venta) y Seguridad Industrial
+(−6.7%). Que unas crezcan y otras caigan descarta una explicación macroeconómica.
 
-| Categoría | Δ 2025→2026 | Peso en la venta |
-|---|---|---|
-| Herramienta Eléctrica | −4.1% | 61% |
-| Seguridad Industrial | −6.7% | 3% |
-
-Que unas crezcan y otras caigan descarta una explicación macroeconómica.
+Un reporte que se detuviera aquí sería plausible, convincente y **equivocado**.
 
 ### 4. La causa es demanda, no precio ni desabasto
 
-Se probaron tres hipótesis con una sola consulta:
+Tres hipótesis, una sola consulta para discriminarlas:
 
-- **¿Precio?** No. Los precios *subieron* en ambas categorías.
-- **¿Quiebres de stock?** No. El fill rate es equivalente en categorías que caen
-  (97.1%) y que crecen (97.8%).
-- **¿Demanda?** **Sí.** Las unidades solicitadas por los clientes caen: Seguridad
-  Industrial −11.7% y Herramienta Eléctrica −4.1%.
+| Hipótesis | Evidencia | Veredicto |
+|---|---|---|
+| ¿Bajaron los precios? | Los precios *subieron* en ambas categorías | ❌ |
+| ¿Faltó producto? | Fill rate equivalente en categorías que caen (97.1%) y que crecen (97.8%) | ❌ |
+| ¿Cayó la demanda? | Unidades solicitadas: Seguridad Industrial −11.7%, Herramienta Eléctrica −4.1% | ✅ |
 
 **Los clientes no dejaron de recibir: dejaron de pedir.**
 
-Seguridad Industrial además lleva dos años consecutivos cayendo
-(13,468 → 12,344 → 10,900 unidades), lo que descarta un bache puntual.
+### 5. Causa raíz: 57 SKUs murieron el 1 de abril de 2025
 
-### 5. Alerta transversal: el servicio se está degradando
+Bajando al nivel de SKU aparece lo que las categorías escondían. Un grupo de
+productos **no cayó gradualmente: se apagó de un mes al otro.**
+
+| Mes | Unidades pedidas |
+|---|---|
+| 2025-01 | 2,760 |
+| 2025-02 | 2,715 |
+| 2025-03 | 2,799 |
+| **2025-04** | **93** ← −96.7 % |
+| 2025-05 | 81 |
+| … | … |
+| 2026-06 | 68 |
+
+Quince meses después siguen planos. Nada natural se comporta así: una demanda que
+se enfría lo hace en curva, no con un interruptor. **Esto es un evento, no una
+tendencia** — un cambio regulatorio, una descontinuación, la pérdida de un cliente
+mayorista, o la entrada de un competidor.
+
+Y estos SKUs **atraviesan todas las categorías**, incluidas las que crecen. Por eso
+el análisis por categoría llevaba a una conclusión falsa: Herramienta Eléctrica y
+Seguridad Industrial caían solo porque concentran más de estos productos.
+
+### 6. El costo: Q1.34 millones de capital atrapado
+
+Orosol compró estos productos calibrando a la demanda anterior. La demanda murió.
+El inventario no.
+
+| | |
+|---|---|
+| SKUs muertos | **57** |
+| Unidades en bodega | 3,494 |
+| **Capital inmovilizado** | **Q 1,337,254** |
+| % del inventario total | **~16 %** |
+
+**Uno de cada seis quetzales del inventario de Orosol está en productos que ya nadie
+compra.** Ese capital podría estar financiando Plomería, que crece 4% anual.
+
+**Acción recomendada:** liquidación dirigida de los 57 SKUs y revisión de la política
+de reposición, que sigue calibrada a una demanda que dejó de existir hace 15 meses.
+
+### 7. Alerta abierta: el servicio se está degradando
 
 Al margen del estancamiento, el fill rate cayó de ~99% (2023) a ~97.5% (2026) en
-**todas** las categorías. Es un problema distinto, transversal, y merece
-investigación propia.
-
----
-
-*Siguiente pregunta abierta: ¿la demanda cayó en toda la categoría, o se desplomó
-en un grupo específico de SKUs? La respuesta cambia por completo el diagnóstico.*
+**todas** las categorías. Problema distinto, transversal, pendiente de investigar.
