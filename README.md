@@ -185,7 +185,66 @@ compra.** Ese capital podría estar financiando Plomería, que crece 4% anual.
 **Acción recomendada:** liquidación dirigida de los 57 SKUs y revisión de la política
 de reposición, que sigue calibrada a una demanda que dejó de existir hace 15 meses.
 
-### 7. Alerta abierta: el servicio se está degradando
+### 7. El servicio se degradó porque se recortó el inventario
 
-Al margen del estancamiento, el fill rate cayó de ~99% (2023) a ~97.5% (2026) en
-**todas** las categorías. Problema distinto, transversal, pendiente de investigar.
+El fill rate cayó de 99.1% (2023) a 97.6% (2026), **parejo en las tres bodegas y
+en todas las categorías**. Esa uniformidad es la pista: una causa local no produce
+un efecto global.
+
+Primero se descartó la explicación aburrida — que el negocio hubiera crecido contra
+una capacidad fija. No fue eso:
+
+| Año | Demanda | Δ | Inventario promedio | Δ |
+|---|---|---|---|---|
+| 2023 | 148,456 | — | 11.4 | — |
+| 2024 | 156,088 | +5.1% | **8.4** | **−26.3%** |
+| 2025 | 157,503 | +0.9% | 8.3 | −1.2% |
+| 2026 | 153,599 | −2.5% | 8.6 | +3.6% |
+
+La demanda apenas se movió. **El inventario se desplomó 26% en 2024 y nunca se
+recuperó.** Menos colchón, más quiebres. Transversal, como el síntoma.
+
+### 8. Y ese recorte está costando dinero
+
+Los datos no dicen si la reducción fue una decisión deliberada (liberar capital de
+trabajo) o un recorte a ciegas. Pero sí permiten **ponerle precio**:
+
+| Año | Margen perdido por quiebres | Valor del capital liberado | **Neto** |
+|---|---|---|---|
+| 2024 | Q 692,307 | Q 413,908 | **−Q 278,399** |
+| 2025 | Q 745,006 | Q 450,145 | **−Q 294,861** |
+| 2026 * | Q 888,090 | Q 428,498 | **−Q 459,592** |
+
+*\* 2026 es medio año, y ya supera la pérdida de años completos anteriores.*
+
+**Supuestos declarados** (cambiarlos cambia el resultado):
+1. La venta perdida es un **techo**: asume que el cliente no vuelve. La pérdida real
+   es menor, pero no es observable en los datos.
+2. Se pierde el **margen**, no la venta: el costo del producto no se desembolsó.
+3. El capital liberado se valora al **12% anual** (costo de capital referencial para
+   una empresa mediana en Guatemala).
+
+> **Conclusión: la reducción de inventario de 2024 liberó ~Q3.5M de capital, pero
+> cuesta ~Q460k al año en margen perdido. Es una pérdida neta, y se está agravando.**
+
+### 9. Riesgo abierto: un proveedor concentra el 31% de la venta
+
+El **Proveedor 29** (México, 22 SKUs) representa el **31.07%** de la venta total de
+Orosol. Hoy funciona bien — y por eso nadie lo mira. Si sube precios, se atrasa o
+quiebra, un tercio del negocio se apaga.
+
+Nota metodológica: durante la investigación se detectó que el **Proveedor 25** se
+degradó fuertemente (quiebres de 19.1% → 35.6%, +16.5 pp, 4.5× peor que el
+siguiente). Señal limpia, narrativa convincente — y **materialmente irrelevante**:
+pesa el **1.24%** de la venta. Publicarlo como causa del problema de servicio habría
+sido un error caro.
+
+**Encontrar una señal no es encontrar una causa. Siempre hay que preguntar cuánto
+pesa.**
+
+### 10. Pendiente: las unidades perdidas siguen creciendo
+
+El inventario está plano desde 2024 (8.4 → 8.3 → 8.6), pero las unidades no servidas
+siguen subiendo: **1,340 → 2,704 → 3,409 → 3,680** (y 2026 es medio año). Algo más se
+está deteriorando. Hipótesis a probar: la política de reposición sigue calibrada a la
+demanda anterior, incluidos los 57 SKUs que murieron en abril de 2025.
